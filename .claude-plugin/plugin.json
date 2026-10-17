@@ -1,0 +1,9 @@
+{
+  "name": "governanceos",
+  "displayName": "GovernanceOS",
+  "version": "1.0.0",
+  "description": "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT. Orchestrates 9 published governance sub-skills by slug; LGD three-laws embedded.",
+  "author": "SynomosAI",
+  "license": "MIT",
+  "skills": ["."]
+}
