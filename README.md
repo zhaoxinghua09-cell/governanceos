@@ -1,5 +1,12 @@
 # GovernanceOS
 
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
+[![Content: All Rights Reserved](https://img.shields.io/badge/Content-All%20Rights%20Reserved-red.svg)](LICENSE-CONTENT)
+[![AI Governance](https://img.shields.io/badge/AI-agent-governance-2ea44f.svg)](#)
+[![Security & Compliance](https://img.shields.io/badge/security-compliance-blue.svg)](#)
+[![Python Router](https://img.shields.io/badge/router-python%203-3776AB.svg)](scripts/governance_flow.py)
+[![Bilingual EN/ZH](https://img.shields.io/badge/docs-EN%2FZH-brightgreen.svg)](README.en.md)
+
 **One operating system for the full AI-agent governance lifecycle — SPEC → PLAN → GATE → AUDIT.**
 A methodology collection that orchestrates 9 independently published governance sub-skills by slug. It vendors **no** sub-skill internals. Differentiator: theory (LGD three-laws) + skills + evidence chain + supervision charter, in one repo.
 
@@ -116,3 +123,16 @@ python3 scripts/governance_flow.py --badge
 ```
 
 本仓为纯文档 + 只读路由：无网络、不写业务数据、不代执行。许可：代码（.py）MIT；SKILL.md 中的方法论文本不在 MIT 覆盖范围内。
+
+---
+
+## License / 许可
+
+本仓为**混合仓**：代码与方法论文本采用不同许可（与上文既有声明一致）。
+
+- **代码（MIT）**：`scripts/governance_flow.py`、`install.sh`、`install.ps1` 及各插件 shim 清单以 MIT 许可发布，见 [LICENSE](LICENSE)。
+- **方法论文本（保留所有权利）**：`SKILL.md` 与 `README.md` 等文档正文不属 MIT，可在署名后短引与链接；转载、改编、入训练语料须书面申请，见 [LICENSE-CONTENT](LICENSE-CONTENT)。
+- 本仓按 slug 引用 9 个已独立发布的子技能，不内嵌其内部实现；各子技能以其各自许可证为准。
+
+安全问题请按 [SECURITY.md](SECURITY.md) 私下报告；贡献见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+联系：zhaoxinghua09@gmail.com ｜ ORCID 0009-0001-0512-1237

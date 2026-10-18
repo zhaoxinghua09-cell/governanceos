@@ -1,0 +1,72 @@
+# GovernanceOS (governanceos) — full text
+
+This file is the "full" edition of the llms.txt standard, for long-context models that read the whole repo description at once.
+
+## What this is
+
+`governanceos` is a *methodology collection*: one operating system that wires the
+full AI-agent governance lifecycle end to end — SPEC → PLAN → GATE → AUDIT. It
+does **not** re-implement security logic. It routes you, phase by phase, to 9
+sub-skills that are already published and maintained on their own. Treat this
+repo as the table of contents; the sub-skills are the chapters.
+
+Differentiator vs. external collections (superpowers / ECC / caveman): theory
+(LGD three-laws: registered / evidenced / gated) + skills + evidence chain +
+supervision charter ship in one auditable unit.
+
+## What problem it solves
+
+1. You want an end-to-end governance plan for an AI agent, not nine loose tools.
+2. You need a pre-launch security audit: red-team, injection shield, leak scan,
+   document desensitization, kill-switch.
+3. You need release-compliance gates before publishing a skill.
+4. You want provenance: a badge issued only after gates pass, then verified.
+
+## The four phases
+
+1. **SPEC** — pin governance scope and supervision charter before building.
+2. **PLAN (defense in depth)** — `agent-redteam-kit` → `prompt-injection-shield`
+   → `prompt-leak-scanner` → `doc-desens-scanner` → `agent-kill-switch`.
+3. **GATE (two hard stops)** — `skill-quality-gate` (library admission) and
+   `publish-quality-gate` (external publish); desensitization and kill-switch
+   wired in as hard stops.
+4. **AUDIT (provenance)** — `lgd-badge-issuer` then `lgd-badge-verify`.
+
+## Quick start
+
+```bash
+git clone https://github.com/zhaoxinghua09-cell/governanceos.git
+cd governanceos
+
+# list the whole lifecycle (4 phases, 9 sub-skills)
+python3 scripts/governance_flow.py --list
+
+# get the call note for one phase or slug
+python3 scripts/governance_flow.py --route plan
+python3 scripts/governance_flow.py --route lgd-badge-verify
+
+# print the live LGD three-law status line
+python3 scripts/governance_flow.py --badge
+```
+
+Requirements: Python 3. Prefer running `./install.sh` (macOS/Linux) or
+`./install.ps1` (Windows) to point your agent CLI at `SKILL.md`.
+
+## Trigger words
+
+治理全流程 / 发布前要过哪些门 / 给我一套治理方法论 / AI-agent governance plan /
+pre-launch security audit / release-compliance review / red-team drill /
+prompt-injection shield / leak scanner / kill switch / quality gate / badge issue verify.
+
+## License and rights
+
+- **Router code** (`scripts/*.py`, installers, plugin shims): MIT — see `LICENSE`.
+- **Methodology prose** (`SKILL.md`, `README.md` docs): all rights reserved;
+  short citation and linking allowed with attribution — see `LICENSE-CONTENT`.
+- The 9 referenced sub-skills keep their own licenses.
+- Contact: zhaoxinghua09@gmail.com ｜ ORCID `0009-0001-0512-1237`.
+
+## Links
+
+- Repo: https://github.com/zhaoxinghua09-cell/governanceos
+- Registry index: https://zhaoxinghua09-cell.github.io/lgd-skills-index/

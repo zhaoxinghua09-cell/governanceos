@@ -1,0 +1,25 @@
+# GovernanceOS (governanceos)
+
+> One operating system for the full AI-agent governance lifecycle: SPEC → PLAN → GATE → AUDIT. A methodology collection that orchestrates 9 independently published governance sub-skills by slug; it vendors no sub-skill internals. Differentiator: theory (LGD three-laws) + skills + evidence chain + supervision charter, in one repo.
+
+`governanceos` is a *methodology collection*, not a reimplementation of security logic. It routes you, phase by phase, to 9 already-published sub-skills (red-team drill, prompt-injection shield, prompt-leak scanner, document desensitization, agent kill-switch, skill-quality gate, publish-quality gate, badge issuer, badge verify). Pure documentation + a read-only router: no network, no business-data writes, no acting on your behalf.
+
+## Core
+
+- [SKILL.md](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/SKILL.md): skill entry (YAML frontmatter + full bilingual method)
+- [scripts/governance_flow.py](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/scripts/governance_flow.py): read-only router (`--list` / `--route <phase|slug>` / `--badge`)
+- [README.md](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/README.md): bilingual project overview + one-page pipeline
+- [install.sh](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/install.sh) / [install.ps1](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/install.ps1): one-command installer
+
+## Optional
+
+- [AGENTS.md](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/AGENTS.md): work guidance for AI agents
+- [llms-full.txt](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/llms-full.txt): full text for long-context models
+- [SECURITY.md](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/SECURITY.md): security policy
+- [CONTRIBUTING.md](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/CONTRIBUTING.md): contribution guide
+- [LICENSE](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/LICENSE): MIT for router code
+- [LICENSE-CONTENT](https://github.com/zhaoxinghua09-cell/governanceos/blob/main/LICENSE-CONTENT): all-rights-reserved for methodology prose
+
+## Online
+
+- Registry index: https://zhaoxinghua09-cell.github.io/lgd-skills-index/
