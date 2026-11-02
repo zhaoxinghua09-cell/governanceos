@@ -1,12 +1,14 @@
 {
+  "id": "governanceos",
   "name": "governanceos",
   "version": "1.1.0",
   "displayName": "GovernanceOS",
-  "description": "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT. Orchestrates 9 independently published governance sub-skills by slug; LGD three-laws (registered/evidenced/gated) embedded as live badges.",
+  "description": "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT -> EVO. Orchestrates 24 governance nodes by slug across five phases with eight hard release gates; LGD three-laws (registered/evidenced/gated) embedded as live badges.",
   "author": "SynomosAI",
   "license": "MIT",
-  "family": "bundle-plugin",
-  "hostTargets": ["claude", "codex", "cursor"],
-  "skills": ["SKILL.md"],
+  "configSchema": {},
+  "skills": [
+    "SKILL.md"
+  ],
   "readme": "README.md"
 }
