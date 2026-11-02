@@ -1,7 +1,7 @@
 {
   "name": "governanceos",
   "displayName": "GovernanceOS — AI Agent Safety & Governance",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Stop prompt injection, data leaks, and broken-skill releases. A one-command governance router that orchestrates 24 governance nodes across the full agent lifecycle (SPEC -> PLAN -> GATE -> AUDIT -> EVO) with eight hard release gates.",
   "author": "SynomosAI",
   "license": "MIT",
