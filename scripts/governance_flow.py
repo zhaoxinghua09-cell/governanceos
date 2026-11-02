@@ -7,7 +7,7 @@ This is a thin DISPATCHER. It does NOT vendor or re-implement any sub-skill; it 
 points you at the independently published sub-skill slug for each governance phase.
 All real work is done by the referenced sub-skills.
 
-Lifecycle: SPEC -> PLAN -> GATE -> AUDIT (9 sub-skills orchestrated by slug).
+Lifecycle: SPEC -> PLAN -> GATE -> AUDIT -> EVO (24 sub-skills orchestrated by slug).
 
 Usage:
   python3 governance_flow.py --list
@@ -19,6 +19,8 @@ import sys
 import argparse
 
 # phase -> [ (stage-key, slug, when-to-use, expected-output) ]
+# THIN DISPATCHER: only references independently published sub-skill slugs.
+# Adding / removing a governance capability = editing one tuple below.
 PHASES = [
     ("spec", "SPEC", [
         ("spec", None,
@@ -49,6 +51,24 @@ PHASES = [
         ("publish-gate", "publish-quality-gate",
          "Right before external publish: run the release/quality gate.",
          "Publish gate verdict; blocks launch on any blocking finding."),
+        ("admission-gate", "skill-admission-gate",
+         "When a new skill requests library admission: run the admission gate.",
+         "Admission verdict: admit / conditional / reject with reasons."),
+        ("review-gate", "publish-review-gate",
+         "Before a publish: run the human + automated review gate.",
+         "Review verdict with checklist coverage."),
+        ("release-gate", "release-gate-check",
+         "At release time: verify all release prerequisites are met.",
+         "Release readiness checklist with pass/fail."),
+        ("skill-release-gate", "skill-release-gate",
+         "When shipping a skill package: run the skill release gate.",
+         "Release gate verdict; blocks on blocking finding."),
+        ("oversight-gate", "human-oversight-gate",
+         "For high-risk actions: require a human oversight gate.",
+         "Oversight decision record with approver."),
+        ("gate-policy", "gate-policy-generator",
+         "When you need a gate policy for a new risk class: generate it.",
+         "Generated gate policy document."),
     ]),
     ("audit", "AUDIT", [
         ("badge-issue", "lgd-badge-issuer",
@@ -57,6 +77,35 @@ PHASES = [
         ("badge-verify", "lgd-badge-verify",
          "When relying on someone else's badge: verify its fingerprint and ledger.",
          "Verify pass/fail with reasons."),
+        ("three-laws", "lgd-three-laws-auditor",
+         "Audit a package against the LGD three-laws (registered/evidenced/gated).",
+         "Three-laws audit verdict with per-law evidence."),
+        ("trace-audit", "agent-trace-audit",
+         "Reconstruct an agent's action trace for post-incident audit.",
+         "Action trace log with anomaly flags."),
+        ("bias-audit", "bias-auditor",
+         "Audit outputs/decisions for bias before release.",
+         "Bias audit report with flagged dimensions."),
+        ("env-audit", "env-var-audit",
+         "Audit environment variables / secrets exposure before deploy.",
+         "Env exposure report with leaked-secret findings."),
+        ("gov-audit-chain", "ai-governance-audit-chain",
+         "Build the governance audit chain across an agent's lifecycle.",
+         "Audit chain document linking every gate/evidence."),
+        ("trail-keeper", "audit-trail-keeper",
+         "Maintain the immutable audit trail for compliance.",
+         "Audit trail ledger with append-only entries."),
+        ("pkg-compliance", "expert-package-compliance-audit",
+         "Audit an expert/package for publish-compliance before launch.",
+         "Compliance audit verdict with blocking findings."),
+        ("traceability", "traceability-audit-team",
+         "Run the traceability audit team across a deliverable.",
+         "Traceability matrix with coverage gaps."),
+    ]),
+    ("evo", "EVO", [
+        ("evolution", "agent-evolution",
+         "After deploy: let the agent log findings and evolve its own playbook.",
+         "Evolution log + refined operating procedure."),
     ]),
 ]
 
@@ -83,7 +132,7 @@ def main():
     ap = argparse.ArgumentParser(
         prog="governance-flow",
         description="GovernanceOS — read-only lifecycle router (SPEC->PLAN->GATE->AUDIT) "
-                    "over 9 published governance sub-skills.")
+                    "over 24 published governance sub-skills.")
     ap.add_argument("--list", action="store_true",
                     help="list the full lifecycle (phase | slug | when | output)")
     ap.add_argument("--route", metavar="PHASE|STAGE|SLUG",
@@ -98,7 +147,7 @@ def main():
         print("  REGISTERED 有籍 : %s packages · %s" % b["registered"])
         print("  EVIDENCED  有证 : %s packages · %s" % b["evidenced"])
         print("  GATED      有门禁 : %s packages · %s" % b["gated"])
-        print("  embedded 9 sub-skills overall green: %s" % b["all_subskills_green"])
+        print("  embedded 24 sub-skills overall green: %s" % b["all_subskills_green"])
         return 0
 
     if args.route:
@@ -130,7 +179,7 @@ def main():
         return 2
 
     # default: list the whole lifecycle
-    print("GovernanceOS — lifecycle SPEC -> PLAN -> GATE -> AUDIT (9 sub-skills, by slug):")
+    print("GovernanceOS — lifecycle SPEC -> PLAN -> GATE -> AUDIT -> EVO (24 sub-skills, by slug):")
     print("=" * 78)
     for pkey, plabel, stages in PHASES:
         print("[%s] %s" % (pkey.upper(), plabel))

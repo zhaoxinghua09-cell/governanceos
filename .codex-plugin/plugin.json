@@ -1,8 +1,9 @@
 {
   "name": "governanceos",
-  "display_name": "GovernanceOS",
+  "display_name": "GovernanceOS — AI Agent Safety & Governance",
   "version": "1.0.0",
-  "description": "One OS for the full AI-agent governance lifecycle (SPEC->PLAN->GATE->AUDIT). 9 sub-skills by slug, LGD three-laws embedded.",
+  "description": "Stop prompt injection, data leaks, and broken-skill releases. A one-command governance router that orchestrates 24 governance nodes across the full agent lifecycle (SPEC -> PLAN -> GATE -> AUDIT -> EVO) with eight hard release gates.",
   "author": "SynomosAI",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": ["ai-agent", "ai-safety", "prompt-injection", "llm-security", "guardrails", "red-team", "quality-gate", "agent-governance"]
 }
