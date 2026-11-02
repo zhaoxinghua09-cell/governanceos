@@ -1,0 +1,5 @@
+# ClawHub bundle-plugin allows exactly ONE manifest (server rule).
+# Keep the 3 client manifests for GitHub users only; excluded from the published package.
+.codex-plugin/
+.cursor-plugin/
+.claude-plugin/
