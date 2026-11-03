@@ -4,9 +4,9 @@ display_name: GovernanceOS
 display_name_en: GovernanceOS
 slug: governanceos
 title: GovernanceOS — 一套方法论解决治理全流程（One OS for the full governance loop）
-version: 1.1.2
-description: "The interlink engine and trust hub of the LGD agent-skills supermarket: one command wires the full AI-agent governance lifecycle (SPEC->PLAN->GATE->AUDIT->EVO) and interconnects the 187-package LGD catalog (113 three-laws-governed) into one auditable network — 200+ listings including ecosystem + roadmap. Orchestrates 24 governance sub-skills by slug across five phases (PLAN defense-in-depth, GATE eight hard gates, AUDIT ten auditors, EVO self-evolution) plus three phase-level meta hubs (lgd-gate, lgd-audit, lgd-evo) for discovery; does not vendor their internals. LGD three-laws (registered/evidenced/gated) embedded as pinned-snapshot badges (2026-10-17). Use when the user wants an end-to-end governance plan, a pre-launch security audit, a release-compliance gate, prompt-injection/leak protection, or to browse the LGD ecosystem safely."
-description_zh: "LGD 生态超市的互链发动机与信任中枢：一键编排智能体治理全生命周期（SPEC->PLAN->GATE->AUDIT->EVO），并串联 LGD 已治理网络成一张可信整体——187 包公开目录、其中 113 个带 LGD 三律、200+ 含生态与路线图。按 slug 编排 24 个治理子技能（PLAN 防御纵深 5、GATE 八道硬门、AUDIT 十审计器、EVO 演化），外加三个阶段中枢 lgd-gate / lgd-audit / lgd-evo 便于发现；不内嵌内部实现。LGD 三律（有籍/有证/有门禁）内嵌。当用户要治理方案、上线前安全审计、发布合规门禁、防提示词注入/防泄漏，或要安全浏览 LGD 生态时使用。"
+version: 1.1.3
+description: "The interlink engine and router of the LGD agent-skills supermarket: one command wires the full AI-agent governance lifecycle (SPEC->PLAN->GATE->AUDIT->EVO) and interconnects the 187-package LGD catalog (113 three-laws-governed; the other 74 are ecosystem listings not yet in the ledger) into one auditable network. Orchestrates 24 governance sub-skills by slug across five phases (PLAN defense-in-depth, GATE eight hard gates, AUDIT ten auditors, EVO self-evolution) plus three phase-level meta hubs (lgd-gate, lgd-audit, lgd-evo) for discovery; does not vendor their internals. LGD three-laws (registered/evidenced/gated) embedded as pinned-snapshot badges (2026-10-17). Use when the user wants an end-to-end governance plan, a pre-launch security audit, a release-compliance gate, prompt-injection/leak protection, or to browse the LGD ecosystem safely."
+description_zh: "LGD 生态超市的互链发动机与路由中枢：一键编排智能体治理全生命周期（SPEC->PLAN->GATE->AUDIT->EVO），并串联 LGD 已治理网络成一张可审计整体——187 包公开目录、其中 113 个带 LGD 三律、其余 74 个为尚未入台账的生态收录。按 slug 编排 24 个治理子技能（PLAN 防御纵深 5、GATE 八道硬门、AUDIT 十审计器、EVO 演化），外加三个阶段中枢 lgd-gate / lgd-audit / lgd-evo 便于发现；不内嵌内部实现。LGD 三律（有籍/有证/有门禁）内嵌。当用户要治理方案、上线前安全审计、发布合规门禁、防提示词注入/防泄漏，或要安全浏览 LGD 生态时使用。"
 description_en: "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT -> EVO. Orchestrates 24 independently published governance sub-skills by slug across five phases, plus three meta hubs (lgd-gate, lgd-audit, lgd-evo) for phase-level discovery; does not vendor their internals. LGD three-laws embedded as pinned-snapshot badges (2026-10-17)."
 read_when:
   - 用户要一套智能体治理/安全合规的端到端方案或生命周期路线图（spec→plan→gate→audit）
@@ -41,12 +41,12 @@ interface:
 input_schema:
   args:
     type: string
-    description: "--list 列出全生命周期五阶段与 24 个子技能；--route <phase|slug> 给出该环节调用说明与预期输出；--badge 打印 LGD 三律当前达标状态"
+    description: "--list 列出全生命周期五阶段与 24 个子技能；--route <phase|slug> 给出该环节调用说明与预期输出；--badge 打印 LGD 三律钉死快照状态行（2026-10-17）"
     required: false
 output_schema:
   stdout: 路由表（阶段 | slug | 何时用 | 调用说明 | 预期输出）或三律状态行
   exit_code: "rc=0 正常；rc=2 未知阶段/slug"
-changelog: "1.0.0: Collection-repo upgrade of governance-method-suite (v1.0.1) to the GovernanceOS shape — lifecycle-anchored SPEC->PLAN->GATE->AUDIT orchestration, one-page ASCII pipeline, pinned-snapshot LGD three-law badge line, quantified evidence bars, multi-vendor plugin shims. 1.1.1: version unified across SKILL.md/package.json/openclaw.plugin.json; tags expanded (ai-governance, agent-governance, supply-chain, clawsafe, governance-lifecycle, ai-agent-security, clawhub, skillhub, modelscope, prompt-leak, publish-gate) for discovery; added on-trigger action bridge (run the read-only router, not just describe); added pinned-snapshot refresh note on 2026-10-17 evidence; router docstring now names the full SPEC->PLAN->GATE->AUDIT->EVO lifecycle. 1.1.2: added Standards-alignment section citing ISO/IEC 42001:2023, NIST AI RMF, and OWASP LLM Top 10 (clickable, cited-not-restated); disambiguated catalog scope (187-package public index · 113 three-laws-governed · 200+ incl. ecosystem+roadmap) to resolve the internal 200+/113 contradiction flagged by pre-publication review; replaced 'live' badge wording with 'pinned-snapshot (2026-10-17)' across SKILL.md/README/llms.txt."
+changelog: "1.0.0: Collection-repo upgrade of governance-method-suite (v1.0.1) to the GovernanceOS shape — lifecycle-anchored SPEC->PLAN->GATE->AUDIT orchestration, one-page ASCII pipeline, pinned-snapshot LGD three-law badge line, quantified evidence bars, multi-vendor plugin shims. 1.1.1: version unified across SKILL.md/package.json/openclaw.plugin.json; tags expanded (ai-governance, agent-governance, supply-chain, clawsafe, governance-lifecycle, ai-agent-security, clawhub, skillhub, modelscope, prompt-leak, publish-gate) for discovery; added on-trigger action bridge (run the read-only router, not just describe); added pinned-snapshot refresh note on 2026-10-17 evidence; router docstring now names the full SPEC->PLAN->GATE->AUDIT->EVO lifecycle. 1.1.2: added Standards-alignment section citing ISO/IEC 42001:2023, NIST AI RMF, and OWASP LLM Top 10 (clickable, cited-not-restated); disambiguated catalog scope (187-package public index · 113 three-laws-governed) to resolve the internal 200+/113 contradiction flagged by pre-publication review; replaced 'live' badge wording with 'pinned-snapshot (2026-10-17)' across English docs (the Chinese '实时/当前' wording fix was completed in 1.1.3). 1.1.3: external S6 review (Muse, independent AI seat) adopted — removed self-claimed 'trust hub' branding and the soft-inflation '200+' leg from the scope trio across all five docs (head now states 187 catalog / 113 ledger-enrolled / remaining 74 ecosystem-not-ledger); fixed Chinese '实时/当前' badge wording to '钉死快照 (2026-10-17)' in 3 places; removed the hardcoded 'all_subskills_green' line from router output (no fake all-green); added a condensed Standards-alignment section to SKILL.md + llms.txt and corrected the mapping table (ISO Cl. 5 Leadership, AUDIT Cl. 9.2 Internal audit + 9.1 Monitoring, NIST EVO wording, OWASP (2025)); added adjacent primary sources for the ClawHavoc 2,400+ and 67,000+ skill counts; 'closes all ten' → 'addresses'; dropped four dead-link decorative badges."
 ---
 
 > 凡自治之物 · LGD 治理学 · 创造术家族 ｜ 评测协议：skill-quality-gate
@@ -151,6 +151,24 @@ python3 scripts/governance_flow.py --badge
 - Pure documentation + a read-only router. No network, no business-data writes, no acting on your behalf.
 - Sub-skill release status is tracked separately in the governance ledger; this collection does not republish or fork them.
 
+### Standards alignment (for international readers)
+
+GovernanceOS maps its lifecycle to the three reference frameworks the international community actually uses — **cited, not restated** (standard text stays with its publisher):
+
+| Phase | ISO/IEC 42001:2023 | NIST AI RMF | OWASP (2025) |
+|---|---|---|---|
+| SPEC | Cl. 5 Leadership | Govern | — |
+| PLAN | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure) |
+| GATE | Cl. 9 Performance evaluation | Manage | — |
+| AUDIT | Cl. 9.2 Internal audit (+ 9.1 Monitoring) | Measure | — |
+| EVO | Cl. 10 Improvement | — (functions apply iteratively) | — |
+
+- ISO/IEC 42001:2023 (AI management system) — https://www.iso.org/standard/81230.html
+- NIST AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework
+- OWASP Top 10 for LLM Applications (2025) — https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+This is the same alignment we apply when contributing to ITU / W3C / IETF (see our pre-publication review).
+
 ## 中文
 
 ### 这是什么
@@ -160,7 +178,7 @@ python3 scripts/governance_flow.py --badge
 本技能被加载后，请直接跑只读路由脚本，给用户一个可执行的下一步，而非只描述：
 - `python3 scripts/governance_flow.py --list` —— 列出全生命周期（5 阶段、24 子技能），对齐用户诉求选阶段。
 - `python3 scripts/governance_flow.py --route <阶段|slug>` —— 打印该治理能力的调用说明与预期输出。
-- `python3 scripts/governance_flow.py --badge` —— 打印 LGD 三律实时状态行。
+- `python3 scripts/governance_flow.py --badge` —— 打印 LGD 三律钉死快照状态行（2026-10-17）。
 路由脚本只读：无网络、不写业务数据、不代用户执行任何动作。
 
 与外部所有合集（superpowers / ECC / caveman）的差异：我们把**理论 + 技能 + 证据链 + 监督章程**放在一处——LGD 三律（有籍/有证/有门禁）是内嵌的，不是外挂的。
@@ -243,7 +261,7 @@ python3 scripts/governance_flow.py --list
 python3 scripts/governance_flow.py --route plan
 python3 scripts/governance_flow.py --route lgd-badge-verify
 
-# 打印 LGD 三律实时状态行
+# 打印 LGD 三律钉死快照状态行（2026-10-17）
 python3 scripts/governance_flow.py --badge
 ```
 
