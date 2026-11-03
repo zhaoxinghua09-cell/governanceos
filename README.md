@@ -2,6 +2,7 @@
 
 > **The interlink engine & trust hub of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and connects the LGD-governed skill network into one auditable whole: a 187-package public catalog, of which 113 carry the LGD three-laws (有籍/有证/有门禁), with 200+ more spanning the ecosystem + roadmap.**
 
+[![Trust Score](https://img.shields.io/badge/Trust%20Score-100%2F100%20A%2B-2ea44f.svg)](https://github.com/zhaoxinghua09-cell/skillgate)
 [![AI Safety](https://img.shields.io/badge/AI--agent-safety-2ea44f.svg)](#)
 [![Prompt Injection Shield](https://img.shields.io/badge/prompt--injection-shielded-blue.svg)](#)
 [![Zero Eval Failures](https://img.shields.io/badge/batch--eval-0%20FAIL-brightgreen.svg)](#)
