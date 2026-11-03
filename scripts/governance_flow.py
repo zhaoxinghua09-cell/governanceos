@@ -131,7 +131,7 @@ def all_stages():
 def main():
     ap = argparse.ArgumentParser(
         prog="governance-flow",
-        description="GovernanceOS — read-only lifecycle router (SPEC->PLAN->GATE->AUDIT) "
+        description="GovernanceOS — read-only lifecycle router (SPEC->PLAN->GATE->AUDIT->EVO) "
                     "over 24 published governance sub-skills.")
     ap.add_argument("--list", action="store_true",
                     help="list the full lifecycle (phase | slug | when | output)")
