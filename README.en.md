@@ -1,6 +1,6 @@
 # GovernanceOS
 
-> **The interlink engine & trust hub of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and connects 200+ governed LGD skills into one network.**
+> **The interlink engine & trust hub of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and interconnects the 187-package LGD catalog (113 three-laws-governed) into one trusted network — 200+ listings including ecosystem + roadmap.**
 
 [![AI Safety](https://img.shields.io/badge/AI--agent-safety-2ea44f.svg)](#)
 [![Prompt Injection Shield](https://img.shields.io/badge/prompt--injection-shielded-blue.svg)](#)
@@ -31,7 +31,7 @@ You already trust your agent with prompts, files, and credentials. In production
 9. **Doc/code/log leakage** — sensitive internal paths or secrets leak when handed to an agent.
 10. **Compliance gap** — teams shipping agents to production need a defensible governance routine, not a doc they forget.
 
-**GovernanceOS closes all ten** — and leaves a verifiable trail proving you did.
+**GovernanceOS addresses all ten** — and leaves a verifiable trail proving you did.
 
 ---
 
@@ -39,7 +39,7 @@ You already trust your agent with prompts, files, and credentials. In production
 
 | # | Advantage | What it means for you |
 |---|-----------|----------------------|
-| 1 | **Single governed entry point** | Hub of the LGD ecosystem supermarket (200+ skills in one trusted, auditable network). |
+| 1 | **Single governed entry point** | Hub of the LGD ecosystem supermarket (187-package catalog · 113 three-laws-governed · 200+ incl. ecosystem + roadmap). |
 | 2 | **One command, whole lifecycle** | `openclaw plugins install clawhub:governanceos` wires SPEC → PLAN → GATE → AUDIT → EVO across 24 governance nodes. |
 | 3 | **Defense-in-depth in PLAN** | redteam + injection-shield + leak-scanner + desens + kill-switch, in order. |
 | 4 | **Eight hard gates** | quality / publish / admission / review / release-check / skill-release / human-oversight / gate-policy — block bad releases at every stage. |
@@ -81,7 +81,7 @@ You already trust your agent with prompts, files, and credentials. In production
 | Building multi-agent / autonomous agents | Defense-in-depth layer + emergency kill-switch |
 | Shipping internal skills/agents to a team | Eight hard gates before anything goes live |
 | Needing an audit trail / compliance | Signed, verifiable badges + evidence chain |
-| Browsing the LGD supermarket | One governed hub interconnecting 200+ skills |
+| Browsing the LGD supermarket | One governed hub interconnecting the 187-package catalog (113 three-laws-governed; 200+ incl. ecosystem + roadmap) |
 
 ---
 
@@ -100,9 +100,13 @@ cd governanceos
 ```
 The same repo installs across **Claude, Codex, and Cursor**.
 
+> **Before installing any `<slug>`**, verify its fingerprint with `lgd-badge-verify` (or check the signed LGD registry). GovernanceOS is a router: it points at independently published packages and does not vouch for each one's publisher — the same supply-chain caution we warn about applies here too.
+
 ---
 
-## ⚡ Live demo (real output, not a mock)
+## ⚡ Router output (real output, not a mock)
+
+*The router prints its real guidance from a pinned snapshot (2026-10-17); it does not execute the sub-skills itself.*
 
 ```bash
 $ python3 scripts/governance_flow.py --list
@@ -193,11 +197,31 @@ Each slug installs independently — `openclaw plugins install clawhub:<slug>`. 
 
 ---
 
+## 🌐 Standards alignment (for international readers)
+
+GovernanceOS maps its lifecycle to the three reference frameworks the international community actually uses — **cited, not restated** (standard text stays with its publisher):
+
+| Phase | What it does | ISO/IEC 42001:2023 | NIST AI RMF | OWASP |
+|---|---|---|---|---|
+| SPEC | pin scope + supervision charter | Cl. 5 Governance / leadership | Govern | — |
+| PLAN | red-team · injection-shield · leak-scan · desens · kill-switch | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (prompt injection, sensitive-info) |
+| GATE | 8 admission / publish / review / release gates | Cl. 9 Performance evaluation | Manage | — |
+| AUDIT | badge · three-laws · trace · evidence chain | Cl. 9.1 Monitoring | Measure | — |
+| EVO | self-evolution of the playbook | Cl. 10 Improvement | iterative | — |
+
+- ISO/IEC 42001:2023 (AI management system) — https://www.iso.org/standard/81230.html
+- NIST AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework
+- OWASP Top 10 for LLM Applications — https://owasp.org/www-project-top-10-for-large-language-model-applications/
+
+This is the same alignment we apply when contributing to ITU / W3C / IETF (see our pre-publication review).
+
+---
+
 ## ⚖️ GovernanceOS vs. "just install skills one by one"
 
 | | Loose skills | GovernanceOS (hub) |
 |---|---|---|
-| Find safe skills | gamble on typosquats | one trusted LGD network (200+) |
+| Find safe skills | gamble on typosquats | one trusted LGD network (187-package catalog · 113 three-laws-governed) |
 | Wire the lifecycle | manual, skippable | SPEC→PLAN→GATE→AUDIT→EVO enforced |
 | Pre-launch audit | ad hoc | redteam + shield + leak + desens + kill-switch |
 | Block bad releases | nothing | eight hard gates |
@@ -209,7 +233,7 @@ Each slug installs independently — `openclaw plugins install clawhub:<slug>`. 
 ## 🔗 Borrowed external forces
 
 - **ClawHub semantic search** — README / `llms.txt` / `llms-full.txt` tuned with trigger phrases.
-- **LGD ecosystem inbound links** — every other LGD skill carries the footer snippet, turning 200+ listings into inbound traffic.
+- **LGD ecosystem inbound links** — every other LGD skill carries the footer snippet, turning 200+ listings (catalog + ecosystem + roadmap) into inbound traffic.
 - **Registry front** — [lgd-skills-index](https://zhaoxinghua09-cell.github.io/lgd-skills-index/).
 - **Shield arm — `wb-safe-team`** — pre-built safety agent team (8 sub-agents) is the runtime execution arm behind the PLAN shield stage.
 - **Governance Council** — `governor-central` + `red-team-lead` + `security-supervisor` + `forensic-officer` + `quality-inspector` own the governance decisions behind the gates.
@@ -227,7 +251,7 @@ Each slug installs independently — `openclaw plugins install clawhub:<slug>`. 
 
 **Do I need all 24 nodes?** No — the engine routes you; install only the slugs you need. Each node is an independent package.
 **Is it just docs?** No — the router runs and prints real guidance; every sub-skill is a working package.
-**Does it touch my data?** No — read-only, no network, no business-data writes.
+**Does it touch my data?** No — the router is read-only, no network, no business-data writes (the router only; each sub-skill runs under its own SKILL.md permissions).
 **Claude / Codex / Cursor?** Yes — vendor shims included.
 
 ---

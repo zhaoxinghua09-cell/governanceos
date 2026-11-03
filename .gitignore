@@ -1,3 +1,13 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# Local dev / tooling scripts (never publish)
+_*.py
+_*.log
+_*.jsonl
+_*.out
+_*.err
+apply-and-push.*
+bridge_check.json
+_s6_dispatch_muse.md

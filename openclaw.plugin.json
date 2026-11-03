@@ -1,9 +1,9 @@
 {
   "id": "governanceos",
   "name": "governanceos",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "displayName": "GovernanceOS",
-  "description": "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT -> EVO. Orchestrates 24 governance nodes by slug across five phases with eight hard release gates; LGD three-laws (registered/evidenced/gated) embedded as live badges.",
+  "description": "One operating system for the full AI-agent governance lifecycle: SPEC -> PLAN -> GATE -> AUDIT -> EVO. Orchestrates 24 governance nodes by slug across five phases with eight hard release gates; LGD three-laws (registered/evidenced/gated) embedded as pinned-snapshot badges (2026-10-17).",
   "author": "SynomosAI",
   "license": "MIT",
   "configSchema": {},
