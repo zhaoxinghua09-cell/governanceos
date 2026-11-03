@@ -1,11 +1,7 @@
 # GovernanceOS
 
-> **The interlink engine & trust hub of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and interconnects the 187-package LGD catalog (113 three-laws-governed) into one trusted network — 200+ listings including ecosystem + roadmap.**
+> **The interlink engine and router of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and interconnects the 187-package LGD catalog (113 three-laws-governed; the other 74 are ecosystem listings not yet in the ledger) into one auditable network.**
 
-[![AI Safety](https://img.shields.io/badge/AI--agent-safety-2ea44f.svg)](#)
-[![Prompt Injection Shield](https://img.shields.io/badge/prompt--injection-shielded-blue.svg)](#)
-[![Zero Eval Failures](https://img.shields.io/badge/batch--eval-0%20FAIL-brightgreen.svg)](#)
-[![LGD Ecosystem Hub](https://img.shields.io/badge/LGD-ecosystem--hub-9b59b6.svg)](#)
 [![Claude · Codex · Cursor](https://img.shields.io/badge/works%20on-Claude%20%7C%20Codex%20%7C%20Cursor-3776AB.svg)](#)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
 
@@ -18,13 +14,13 @@ openclaw plugins install clawhub:governanceos
 
 ## 🔥 The pain it kills (read this first)
 
-You already trust your agent with prompts, files, and credentials. In production these go wrong — and after the **ClawHavoc** campaign (ClawHub pulled 2,400+ malicious / typosquatted skills that stole SSH keys, API tokens, cookies), the risks are no longer theoretical:
+You already trust your agent with prompts, files, and credentials. In production these go wrong — and after the **ClawHavoc** campaign ([ClawHub removed 2,400+ malicious / typosquatted skills that stole SSH keys, API tokens, cookies](https://parallelai.pro/articles/what-are-agent-skills)), the risks are no longer theoretical:
 
 1. **Hijacked** — a prompt-injection hidden in an email, PDF, or webpage silently redirects your agent to exfiltrate data or run attacker commands.
 2. **Leaky** — secrets, PII, or internal context slip into the agent's output or logs.
 3. **Broken in prod** — a "skill" looks fine in the demo but fails, hallucinates, or ships unvetted to users.
-4. **Supply-chain risk** — ClawHub has *no verified-publisher system*; near-miss typosquats of popular names install backdoors. You need a trusted, governed source.
-5. **No map** — 67,000+ skills exist; you can't tell which are safe or governed.
+4. **Supply-chain risk** — ClawHub has *no verified-publisher system*; near-miss typosquats of popular names install backdoors. You need a governed, auditable source.
+5. **No map** — [67,000+ skills exist](https://parallelai.pro/articles/what-are-agent-skills) on the largest registry alone; you can't tell which are safe or governed.
 6. **No audit trail** — after an incident there is no evidence of what was governed.
 7. **Loose tools** — red-team, injection-shield, leak-scan live in separate places; nothing wires them into one lifecycle.
 8. **No kill-switch** — when an agent goes off-script there is no pre-authorized emergency stop.
@@ -39,7 +35,7 @@ You already trust your agent with prompts, files, and credentials. In production
 
 | # | Advantage | What it means for you |
 |---|-----------|----------------------|
-| 1 | **Single governed entry point** | Hub of the LGD ecosystem supermarket (187-package catalog · 113 three-laws-governed · 200+ incl. ecosystem + roadmap). |
+| 1 | **Single governed entry point** | Router of the LGD ecosystem supermarket (187-package catalog · 113 three-laws-governed; the other 74 are ecosystem listings not yet in the ledger). |
 | 2 | **One command, whole lifecycle** | `openclaw plugins install clawhub:governanceos` wires SPEC → PLAN → GATE → AUDIT → EVO across 24 governance nodes. |
 | 3 | **Defense-in-depth in PLAN** | redteam + injection-shield + leak-scanner + desens + kill-switch, in order. |
 | 4 | **Eight hard gates** | quality / publish / admission / review / release-check / skill-release / human-oversight / gate-policy — block bad releases at every stage. |
@@ -81,7 +77,7 @@ You already trust your agent with prompts, files, and credentials. In production
 | Building multi-agent / autonomous agents | Defense-in-depth layer + emergency kill-switch |
 | Shipping internal skills/agents to a team | Eight hard gates before anything goes live |
 | Needing an audit trail / compliance | Signed, verifiable badges + evidence chain |
-| Browsing the LGD supermarket | One governed hub interconnecting the 187-package catalog (113 three-laws-governed; 200+ incl. ecosystem + roadmap) |
+| Browsing the LGD supermarket | One governed router interconnecting the 187-package catalog (113 three-laws-governed; the other 74 are ecosystem listings not yet in the ledger) |
 
 ---
 
@@ -203,15 +199,15 @@ GovernanceOS maps its lifecycle to the three reference frameworks the internatio
 
 | Phase | What it does | ISO/IEC 42001:2023 | NIST AI RMF | OWASP |
 |---|---|---|---|---|
-| SPEC | pin scope + supervision charter | Cl. 5 Governance / leadership | Govern | — |
-| PLAN | red-team · injection-shield · leak-scan · desens · kill-switch | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (prompt injection, sensitive-info) |
+| SPEC | pin scope + supervision charter | Cl. 5 Leadership | Govern | — |
+| PLAN | red-team · injection-shield · leak-scan · desens · kill-switch | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (2025): LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure |
 | GATE | 8 admission / publish / review / release gates | Cl. 9 Performance evaluation | Manage | — |
-| AUDIT | badge · three-laws · trace · evidence chain | Cl. 9.1 Monitoring | Measure | — |
-| EVO | self-evolution of the playbook | Cl. 10 Improvement | iterative | — |
+| AUDIT | badge · three-laws · trace · evidence chain | Cl. 9.2 Internal audit (+ 9.1 Monitoring) | Measure | — |
+| EVO | self-evolution of the playbook | Cl. 10 Improvement | — (functions apply iteratively) | — |
 
 - ISO/IEC 42001:2023 (AI management system) — https://www.iso.org/standard/81230.html
 - NIST AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework
-- OWASP Top 10 for LLM Applications — https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- OWASP Top 10 for LLM Applications (2025) — https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
 This is the same alignment we apply when contributing to ITU / W3C / IETF (see our pre-publication review).
 
@@ -221,7 +217,7 @@ This is the same alignment we apply when contributing to ITU / W3C / IETF (see o
 
 | | Loose skills | GovernanceOS (hub) |
 |---|---|---|
-| Find safe skills | gamble on typosquats | one trusted LGD network (187-package catalog · 113 three-laws-governed) |
+| Find safe skills | gamble on typosquats | one auditable LGD network (187-package catalog · 113 three-laws-governed) |
 | Wire the lifecycle | manual, skippable | SPEC→PLAN→GATE→AUDIT→EVO enforced |
 | Pre-launch audit | ad hoc | redteam + shield + leak + desens + kill-switch |
 | Block bad releases | nothing | eight hard gates |
@@ -233,7 +229,7 @@ This is the same alignment we apply when contributing to ITU / W3C / IETF (see o
 ## 🔗 Borrowed external forces
 
 - **ClawHub semantic search** — README / `llms.txt` / `llms-full.txt` tuned with trigger phrases.
-- **LGD ecosystem inbound links** — every other LGD skill carries the footer snippet, turning 200+ listings (catalog + ecosystem + roadmap) into inbound traffic.
+- **LGD ecosystem inbound links** — every other LGD skill carries the footer snippet, turning the 187 catalog listings + ecosystem links into inbound traffic.
 - **Registry front** — [lgd-skills-index](https://zhaoxinghua09-cell.github.io/lgd-skills-index/).
 - **Shield arm — `wb-safe-team`** — pre-built safety agent team (8 sub-agents) is the runtime execution arm behind the PLAN shield stage.
 - **Governance Council** — `governor-central` + `red-team-lead` + `security-supervisor` + `forensic-officer` + `quality-inspector` own the governance decisions behind the gates.

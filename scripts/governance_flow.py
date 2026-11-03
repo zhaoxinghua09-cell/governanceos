@@ -117,7 +117,6 @@ LGD_BADGE = {
     "registered": ("113/113", "100.0%"),   # 有籍
     "evidenced": ("112/113", "99.1%"),     # 有证
     "gated": ("112/113", "99.1%"),         # 有门禁
-    "all_subskills_green": True,
 }
 
 
@@ -147,7 +146,6 @@ def main():
         print("  REGISTERED 有籍 : %s packages · %s" % b["registered"])
         print("  EVIDENCED  有证 : %s packages · %s" % b["evidenced"])
         print("  GATED      有门禁 : %s packages · %s" % b["gated"])
-        print("  embedded 24 sub-skills overall green: %s" % b["all_subskills_green"])
         return 0
 
     if args.route:

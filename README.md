@@ -1,12 +1,7 @@
 # GovernanceOS
 
-> **The interlink engine & trust hub of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and connects the LGD-governed skill network into one auditable whole: a 187-package public catalog, of which 113 carry the LGD three-laws (有籍/有证/有门禁), with 200+ more spanning the ecosystem + roadmap.**
+> **The interlink engine and router of the LGD agent-skills supermarket — one command wires the full AI-agent governance lifecycle (SPEC → PLAN → GATE → AUDIT → EVO) and connects the LGD-governed skill network into one auditable whole: a 187-package public catalog, of which 113 are enrolled in the LGD three-laws ledger (有籍/有证/有门禁); the remaining 74 are ecosystem listings not yet in the ledger.**
 
-[![Trust Score](https://img.shields.io/badge/Trust%20Score-100%2F100%20A%2B-2ea44f.svg)](https://github.com/zhaoxinghua09-cell/skillgate)
-[![AI Safety](https://img.shields.io/badge/AI--agent-safety-2ea44f.svg)](#)
-[![Prompt Injection Shield](https://img.shields.io/badge/prompt--injection-shielded-blue.svg)](#)
-[![Zero Eval Failures](https://img.shields.io/badge/batch--eval-0%20FAIL-brightgreen.svg)](#)
-[![LGD Ecosystem Hub](https://img.shields.io/badge/LGD-ecosystem--hub-9b59b6.svg)](#)
 [![Claude · Codex · Cursor](https://img.shields.io/badge/works%20on-Claude%20%7C%20Codex%20%7C%20Cursor-3776AB.svg)](#)
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
 
@@ -19,20 +14,20 @@ openclaw plugins install clawhub:governanceos
 
 ## 🔥 The pain it kills (read this first)
 
-You already trust your agent with prompts, files, and credentials. In production these go wrong — and after the **ClawHavoc** campaign (ClawHub pulled 2,400+ malicious / typosquatted skills that stole SSH keys, API tokens, cookies), the risks are no longer theoretical:
+You already trust your agent with prompts, files, and credentials. In production these go wrong — and after the **ClawHavoc** campaign ([ClawHub removed 2,400+ malicious / typosquatted skills that stole SSH keys, API tokens, cookies](https://parallelai.pro/articles/what-are-agent-skills)), the risks are no longer theoretical:
 
 1. **Hijacked** — a prompt-injection hidden in an email, PDF, or webpage silently redirects your agent to exfiltrate data or run attacker commands.
 2. **Leaky** — secrets, PII, or internal context slip into the agent's output or logs.
 3. **Broken in prod** — a "skill" looks fine in the demo but fails, hallucinates, or ships unvetted to users.
-4. **Supply-chain risk** — ClawHub has *no verified-publisher system*; near-miss typosquats of popular names install backdoors. You need a trusted, governed source.
-5. **No map** — 67,000+ skills exist; you can't tell which are safe or governed.
+4. **Supply-chain risk** — ClawHub has *no verified-publisher system*; near-miss typosquats of popular names install backdoors. You need a governed, auditable source.
+5. **No map** — [67,000+ skills exist](https://parallelai.pro/articles/what-are-agent-skills) on the largest registry alone; you can't tell which are safe or governed.
 6. **No audit trail** — after an incident there is no evidence of what was governed.
 7. **Loose tools** — red-team, injection-shield, leak-scan live in separate places; nothing wires them into one lifecycle.
 8. **No kill-switch** — when an agent goes off-script there is no pre-authorized emergency stop.
 9. **Doc/code/log leakage** — sensitive internal paths or secrets leak when handed to an agent.
 10. **Compliance gap** — teams shipping agents to production need a defensible governance routine, not a doc they forget.
 
-**GovernanceOS closes all ten** — and leaves a verifiable trail proving you did.
+**GovernanceOS addresses all ten** — and leaves a verifiable trail proving you did.
 
 ---
 
@@ -40,7 +35,7 @@ You already trust your agent with prompts, files, and credentials. In production
 
 | # | Advantage | What it means for you |
 |---|-----------|----------------------|
-| 1 | **Single governed entry point** | It's the hub of the LGD ecosystem supermarket — a 187-package catalog, 113 three-laws-governed, in one trusted auditable network — recommendations stay inside one safe ecosystem, not random third-party skills. |
+| 1 | **Single governed entry point** | It's the router of the LGD ecosystem supermarket — a 187-package catalog, 113 three-laws-governed, in one auditable network — recommendations stay inside one safe ecosystem, not random third-party skills. |
 | 2 | **One command, whole lifecycle** | `openclaw plugins install clawhub:governanceos` wires SPEC → PLAN → GATE → AUDIT → EVO across 24 governance nodes. |
 | 3 | **Defense-in-depth in PLAN** | redteam + injection-shield + leak-scanner + desens + kill-switch, in order. |
 | 4 | **Eight hard gates** | `skill-quality-gate`, `publish-quality-gate`, `skill-admission-gate`, `publish-review-gate`, `release-gate-check`, `skill-release-gate`, `human-oversight-gate`, `gate-policy-generator` — block bad releases at every stage. |
@@ -59,7 +54,7 @@ You already trust your agent with prompts, files, and credentials. In production
 
 ![GovernanceOS ecosystem map](assets/governanceos-ecosystem.svg)
 
-*GovernanceOS sits at the center of the LGD agent-skills supermarket: it routes to 24 governance nodes across SPEC→PLAN→GATE→AUDIT→EVO. Scope is explicit — 187 packages are listed in the public catalog, 113 of them carry the LGD three-laws (有籍/有证/有门禁); the 200+ figure spans the broader ecosystem + roadmap, not all of which carry three-law badges yet.*
+*GovernanceOS routes within the LGD agent-skills supermarket across 24 governance nodes (SPEC→PLAN→GATE→AUDIT→EVO). Scope is explicit — 187 packages are listed in the public catalog; 113 of them carry the LGD three-laws (有籍/有证/有门禁); the remaining 74 are ecosystem listings not yet enrolled in the three-law ledger.*
 
 ```
    SPEC (定界)       PLAN (防御纵深)                GATE (八道硬门)                AUDIT (凭证留痕)           EVO (演化)
@@ -204,15 +199,15 @@ GovernanceOS maps its lifecycle to the three reference frameworks the internatio
 
 | Phase | What it does | ISO/IEC 42001:2023 | NIST AI RMF | OWASP |
 |---|---|---|---|---|
-| SPEC | pin scope + supervision charter | Cl. 5 Governance / leadership | Govern | — |
-| PLAN | red-team · injection-shield · leak-scan · desens · kill-switch | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (prompt injection, sensitive-info) |
+| SPEC | pin scope + supervision charter | Cl. 5 Leadership | Govern | — |
+| PLAN | red-team · injection-shield · leak-scan · desens · kill-switch | Cl. 6 Planning | Map / Measure / Manage | LLM Top 10 (2025): LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure |
 | GATE | 8 admission / publish / review / release gates | Cl. 9 Performance evaluation | Manage | — |
-| AUDIT | badge · three-laws · trace · evidence chain | Cl. 9.1 Monitoring | Measure | — |
-| EVO | self-evolution of the playbook | Cl. 10 Improvement | iterative | — |
+| AUDIT | badge · three-laws · trace · evidence chain | Cl. 9.2 Internal audit (+ 9.1 Monitoring) | Measure | — |
+| EVO | self-evolution of the playbook | Cl. 10 Improvement | — (functions apply iteratively) | — |
 
 - ISO/IEC 42001:2023 (AI management system) — https://www.iso.org/standard/81230.html
 - NIST AI Risk Management Framework — https://www.nist.gov/itl/ai-risk-management-framework
-- OWASP Top 10 for LLM Applications — https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- OWASP Top 10 for LLM Applications (2025) — https://owasp.org/www-project-top-10-for-large-language-model-applications/
 
 This is the same alignment we apply when contributing to ITU / W3C / IETF (see our pre-publication review).
 
@@ -222,7 +217,7 @@ This is the same alignment we apply when contributing to ITU / W3C / IETF (see o
 
 | | Loose skills | GovernanceOS (hub) |
 |---|---|---|
-| Find safe skills | you gamble on typosquats | one trusted LGD network (187-package catalog · 113 three-laws-governed) |
+| Find safe skills | gamble on typosquats | one auditable LGD network (187-package catalog · 113 three-laws-governed) |
 | Wire the lifecycle | manual, easy to skip a stage | SPEC→PLAN→GATE→AUDIT→EVO enforced |
 | Pre-launch audit | ad hoc | redteam + shield + leak + desens + kill-switch |
 | Block bad releases | nothing | eight hard gates |
@@ -234,7 +229,7 @@ This is the same alignment we apply when contributing to ITU / W3C / IETF (see o
 ## 🔗 Borrowed external forces (how it spreads)
 
 - **ClawHub semantic/vector search** — this README, `llms.txt`, and `llms-full.txt` are tuned with trigger phrases so an agent asked about "AI agent security / governance" finds GovernanceOS first.
-- **LGD ecosystem inbound links** — every other LGD-published skill carries the footer snippet below, turning 200+ listings into inbound traffic to the hub.
+- **LGD ecosystem inbound links** — every other LGD-published skill carries the footer snippet below, turning the 187 catalog listings + ecosystem links into inbound traffic to the hub.
 - **Registry supermarket front** — featured hub at [lgd-skills-index](https://zhaoxinghua09-cell.github.io/lgd-skills-index/).
 - **Shield arm — `wb-safe-team`** — the pre-built safety agent team (8 sub-agents: cred-guard, credit-steward, link-monitor, config-auditor, crypto-keeper, health-sentinel, risk-planner, recovery-keeper) is the runtime execution arm behind the PLAN shield stage.
 - **Governance Council** — `governor-central` + `red-team-lead` + `security-supervisor` + `forensic-officer` + `quality-inspector` is the expert team that owns the governance decisions behind the gates.
@@ -276,7 +271,7 @@ Contact: zhaoxinghua09@gmail.com ｜ ORCID 0009-0001-0512-1237
 
 ## 中文速览
 
-**GovernanceOS = LGD 生态超市的互链发动机与信任中枢**：一键编排 24 个已发布治理子技能，覆盖智能体全生命周期——**定界(SPEC) → 防御纵深(PLAN) → 八道硬门(GATE) → 凭证留痕(AUDIT) → 演化(EVO)**，并串联 LGD 已治理网络成一张可信整体——187 包公开目录、其中 113 个带 LGD 三律、200+ 含生态与路线图。三个阶段中枢 `lgd-gate`（门禁·8 节点）/ `lgd-audit`（审计·10 节点）/ `lgd-evo`（演化）让你按阶段发现、按需安装，`--verify` 实探可用性、诚实分级（LIVE/PRESENT/ECOSYSTEM）。
+**GovernanceOS = LGD 生态超市的互链发动机与路由中枢**：一键编排 24 个已发布治理子技能，覆盖智能体全生命周期——**定界(SPEC) → 防御纵深(PLAN) → 八道硬门(GATE) → 凭证留痕(AUDIT) → 演化(EVO)**，并串联 LGD 已治理网络成一张可审计整体——187 包公开目录、其中 113 个带 LGD 三律、其余 74 个为尚未入台账的生态收录。三个阶段中枢 `lgd-gate`（门禁·8 节点）/ `lgd-audit`（审计·10 节点）/ `lgd-evo`（演化）让你按阶段发现、按需安装，`--verify` 实探可用性、诚实分级（LIVE/PRESENT/ECOSYSTEM）。
 
 - **十大痛点全解决**：提示词注入劫持、数据/PII 泄漏、坏技能上线、供应链投毒（ClawHavoc 删 2400+ 恶意包）、无治理地图、无审计凭证、工具零散、无停机卡、文档泄密、合规缺口。
 - **核心优势**：单一治理入口 / 一键全生命周期 / PLAN 纵深防御 / 八道硬门 / 真凭证 / 实证 0 失败 / LGD 三律内嵌 / 三端通用 / 只读安全 / 100% 可读 / MIT 免费 / 三中枢可发现。
